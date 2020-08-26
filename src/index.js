@@ -1,17 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import allReducers from './reducers'
+import Product from './components/product'
+import Routing from './components/routing'
+import { HashRouter, Router } from 'react-router-dom/cjs/react-router-dom.min';
 
+const store = createStore(allReducers)
+console.log(store);
+console.log("Store is created....");
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <HashRouter>
+  <Provider store={store}>
+    <Routing></Routing>
+    </Provider></HashRouter>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

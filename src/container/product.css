@@ -1,0 +1,93 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    border-radius: 25px;
+    border: 2px solid #C39BD3;
+   
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    border-style: double;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+  
+    }
+  }
+
+  .column {
+    padding: 25px;
+    float: left;
+    width: 25%;
+    /* padding: 0 10px; */
+    margin-top: 9px;
+  }
+
+  .row{
+    margin: -13px -5px;
+    margin-left: 33px;
+        }
+   img{
+           
+            border-radius:10px
+        }
+        
+  #editbtn{
+margin-left: 2px;
+    background-color: darkorange;
+    width: 65px;
+  }
+
+  #delbtn{
+    margin-left: 2px;
+    background-color:red;
+    width: 65px;
+  }
+
+  #addbutton{
+    margin-left: 16px;
+      color: honeydew;
+    background-color:green;
+    width: 65px;
+  }
+  
+  #loginstyles{
+    text-align: center;
+
+  }
+
+  #subbutton{
+    background-color:green;
+    color:honeydew;
+    text-align: center;
+    margin-left:52px;
+  }
+
+  #fieldset{
+    display: inline-block;
+    
+  }
+
+  #legend{
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+  }
+
+  #add{
+    color: #840669;
+  }
+
+  #savebtn{
+    color: honeydew;
+    background-color: blue;
+    margin-left: 60px;
+  }
+
+  h3{
+    color: darkolivegreen;
+  }

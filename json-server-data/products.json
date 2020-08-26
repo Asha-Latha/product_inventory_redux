@@ -1,0 +1,22 @@
+{
+  "addproduct": [
+    {
+      "image": "chart.png",
+      "name": "dshjkl",
+      "category": "Mobiles",
+      "price": "12000",
+      "quantity": "2",
+      "instock": "1",
+      "id": 1
+    },
+    {
+      "image": "https://lh3.googleusercontent.com/proxy/wgmFVJw1YGyJJ08yWIHBT80FPnEuUYffXNCtakfeTELWvpJSf5XT5BqqH6rGvXmELaWNAqiGoFEcFLeQ1AEN4_gVqfM0_pjsZoXg7jgh",
+      "name": "kdfg",
+      "category": "kagjk",
+      "price": "23",
+      "quantity": "2",
+      "instock": "nio",
+      "id": 2
+    }
+  ]
+}

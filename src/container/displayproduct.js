@@ -11,8 +11,6 @@ import editClicked from '../actions/editproduct';
 import {compose} from 'redux'
 import Header from '../container/header';
 
-
-
  class DisplayProducts extends React.Component {
     
     constructor(props){
@@ -23,8 +21,6 @@ import Header from '../container/header';
             myid:0,
         }
     }
-
-    
     editProductWithId=(id)=>{
         console.log('edit product for received id: ' + id);
         this.setState({myid: id})
@@ -37,33 +33,15 @@ import Header from '../container/header';
                                     console.log('Edit product with id+++++++++++++: ' + id);
       }
 
-
-    //   getProducts(){
-    //     axios.get('http://localhost:3000/addproduct')
-    //     .then((response)=>{   
-    //         this.props.
-    //          this.setState({allproducts: response.data})
-    //         //  this.setState({finalSearchValue: response.data})
-    //         console.log(response)},(error)=>{
-    //             console.log(error)     
-    //     })
-    // }
-
     displayPropsReceivedFromStore=()=>{
-
-
         console.log("Received props from store -> friends");
         return this.props.products.map(f=>{
             return (
-               
-
 <div className="row">
 <div className="column">
             <div className="card">
             <img src={f.image}  width="200px"
             height="205px"  alt="product image"/>
-            {/* <p id="showprdt">Product Id: {f.id}</p> */}
-            {/* <img src={"images/" + this.props.productimage} style={imgStyle}></img> */}
             <h3>{f.name}</h3>
             <p id="showprdt">Category: {f.category}</p>
             <p id="showprdt">Quantity : {f.quantity}</p>
@@ -74,18 +52,15 @@ import Header from '../container/header';
                 </div>
                 </div>
 </div>
-            )
-    
+            )   
         });
     }
     
-    getSearch=(e)=>{
-       
+    getSearch=(e)=>{  
         let searchvalue = e.target.value.toLowerCase();
         if(searchvalue === ''){
          this.displayPropsReceivedFromStore();
-         }
-      
+         }     
         this.setState({searchV : searchvalue})
         console.log(searchvalue);
          let searchProducts = this.state.finalSearchValue.filter(f=>
@@ -106,15 +81,13 @@ import Header from '../container/header';
         return ( 
           <div><Header></Header>
             <div>
-            <div><h3 id="add">Add Product:<button id="addbutton" onClick={this.addProduct}>Add</button></h3> </div>
-       
+            <div><h3 id="add">Add Product:<button id="addbutton" onClick={this.addProduct}>Add</button></h3> </div>  
             <div>
              <label><h3>Search:</h3></label>  <input type="text" onChange={this.getSearch}></input> 
                <br></br>
             <div>
                   <br></br>
-                   {this.displayPropsReceivedFromStore()}
-                     
+                   {this.displayPropsReceivedFromStore()}            
             </div>
             </div></div></div>
          );
@@ -133,7 +106,6 @@ function convertEventToPropsAndDispatch(dispatch){
         clickProductName: productNameClicked,
         deleteProduct: deleteClicked,
         getSearch: searchClicked,
-        // editProduct:editClicked
     }, dispatch)
 
 }

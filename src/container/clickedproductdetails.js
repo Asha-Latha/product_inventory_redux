@@ -2,15 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class ProductClicked extends React.Component {
-    render() { 
-        if(!this.props.products){
+    render() {
+        if (!this.props.products) {
             return (
                 <div>
                     <h3>Click on any product above to see detail....</h3>
                 </div>
             )
-        }else{
-            return ( 
+        } else {
+            return (
                 <div>
                     <ol>
                         <li> Name: {this.props.products.name}</li>
@@ -20,23 +20,17 @@ class ProductClicked extends React.Component {
                         <li>in stock: {this.props.products.instock}</li>
                     </ol>
                 </div>
-             );
+            );
         }
 
-        
+
     }
 }
- 
-
-
-function convertStoreToPropsForFriendDetail(store){
+function convertStoreToPropsForFriendDetail(store) {
     console.log("FriendDetail has received store....")
     console.log(store);
     return {
         products: store.productClicked,
     }
 }
-
-
- 
 export default connect(convertStoreToPropsForFriendDetail)(ProductClicked)

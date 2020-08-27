@@ -2,35 +2,30 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class DeleteProducts extends React.Component {
-    state = {  }
-
-    render() { 
-
-
-        if(!this.props.products){
+    state = {}
+    render() {
+        if (!this.props.products) {
             return (
                 <div>
                     <h3></h3>
                 </div>
             )
-        }else{
-            return ( 
+        } else {
+            return (
                 <div>
-                    {/* Product Deleted!! */}
+                    <h2>Product Deleted!! </h2>
                 </div>
-             );
+            );
         }
-
-        
     }
 }
 
-function convertStoreToPropsForFriendDetail(store){
+function convertStoreToPropsForFriendDetail(store) {
     console.log("FriendDetail has received store....")
     console.log(store);
     return {
         products: store.deleteClicked,
     }
 }
- 
+
 export default connect(convertStoreToPropsForFriendDetail)(DeleteProducts)

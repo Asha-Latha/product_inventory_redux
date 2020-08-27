@@ -52,29 +52,13 @@ class ProductAdd extends React.Component {
             category: this.state.category,
             price:this.state.price,
             quantity:this.state.quantity,
-            instock:this.state.instock,
-            
+            instock:this.state.instock,   
         }
-        axios.post('http://localhost:3000/addproduct', product)
-        .then(response=>{
-            console.log(response);
-           this.setState({success:true})
-           //this.props.addProducts(productRequestBody)
-           this.props.sendNewProduct(response.data)
-           this.props.history.push('/product')
-            }, error=>{
-                 console.error(error);
-            })
-
-
-
-        // console.log(product)
-        // this.props.sendNewProduct(product)
-       
+           this.props.sendNewProduct(product)
+           this.props.history.push('/product')       
     }
 
-    render() { 
-     
+    render() {    
         return ( 
             <div><Logout></Logout>
            <div>  
